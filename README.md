@@ -10,7 +10,7 @@ A simple tokens field for AngularJS
 <script src="tokens-field.js"></script>
 
 ...
-<!-- tags must be an array-->
+<!-- tags must be an array -->
 <ng-tokens-field tokens="tags"></ng-tokens-field>
 ```
 
