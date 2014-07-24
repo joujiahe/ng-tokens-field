@@ -20,7 +20,15 @@ angular.module('ngTokensField', [])
             if(evt.which === 13 || evt.which === 188) {
                 scope.$apply(function() {
                     evt.preventDefault();
-                    tokens.push(scope.inputText);
+                    var tagAlreadyAdded = false;
+                    for(var i = 0; i < tokens.length; i++) {
+                      if (tokens[i] == scope.inputText) tagAlreadyAdded = true;
+                    }
+
+                    if(!tagAlreadyAdded) {
+                      tokens.push(scope.inputText);
+                    }
+
                     scope.inputText = '';
                 })
             }
